@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" ng-app="scotchApp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HomePage</title>
     <!-- Jquery -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <!-- Angular JS -->
-    <script src="../../../assets/angular/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-route.min.js"></script>
+    <script src="../js/script.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body ng-controller="navController">
+<body ng-controller="mainController">
     <!-- Site header and  navigation -->
-    <header class="top" role="banner">
-            <nav class="navbar navbar-light navbar-expand-lg bg-info">
+    <header class="plain-header" role="banner">
+            <nav class="navbar navbar-light navbar-expand-lg">
                 <div class="container">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#">Botdy</a>
+                        <a class="navbar-brand" href="#"><!--Botdy--></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                             <span class="icon-bar"></span>
@@ -54,9 +56,28 @@
                         <form class="form-inline my-2 my-lg-0">
 
                         </form>
-                </div>
+                    </div>
                 </div>
             </nav>
     </header>
+    <h1>Relationship-based Messenger marketing</h1>
+    <h2>Create a Messenger bot for marketing, sales and support on the world’s leading chatbot platform.   Get started for free</h2>
+
+    <div id="main">
+        <!-- angular templating -->
+        <!-- this is where content will be injected -->
+        <div ng-view></div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <span style="float:left;">2015 Bryant Tunbutr</span>
+            <span style="float: right;">
+                <a href="http://www.bryanttunbutr.com/projects" id="home">Projects</a>
+                <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left: 20px">Blog</a>
+            </span>
+        </div>
+    </footer>
+
 </body>
 </html>
