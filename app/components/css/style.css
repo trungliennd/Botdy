@@ -23,6 +23,54 @@ html {
     line-height: 1;
 }
 
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+q, blockquote {
+    quotes: none;
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none;
+}
+
+a img {
+    border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+
+html, body {
+    height: 100%;
+}
+
+b {
+    font-weight: bold;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Custom;
+    src: url("../../../assets/font/custom.woff");
+}
 
 body {
     font-family: Custom, sans-serif;
@@ -82,6 +130,12 @@ section.section_welcome {
     padding-bottom: 90px;
     background-color: #f9f8f8;
     position: relative;
+}
+
+section.section_welcome .container {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 section.section_welcome .container .sectioncaption {
@@ -213,10 +267,19 @@ section.section_automate .container {
         padding-left: 5%;
         padding-right: 5%;
     }
+    section.section_welcome .container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
 
 @media (max-width: 544px) {
     section.section_automate .container {
+        padding-left: 37px;
+        padding-right: 37px;
+    }
+
+    section.section_welcome .container {
         padding-left: 37px;
         padding-right: 37px;
     }
@@ -329,7 +392,7 @@ section.section_automate .container .iphone .notifications .item .caption .now {
     margin-right: 8px;
 }
 
-section.section_automate .container .iphone .notifications. .item .name {
+section.section_automate .container .iphone .notifications .item .name {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: -9px;
@@ -375,11 +438,75 @@ section.section_automate .flag .numbers {
     border-radius: 50px;
 }
 
+body section.section_automate .flag.animate .numbers {
+    transform: scale(1);
+}
+
+section.section_marketing {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    background-color: #f9f8f8;
+    position: relative;
+}
+
+section.section_marketing .messengericon {
+    position: absolute;
+    right: 74px;
+    top: 85px;
+}
+
+section.section_marketing .messengericon img {
+    width: 86px;
+    height: 86px;
+    display: block;
+    margin: auto;
+}
+
+section.section_marketing .messengericon .text {
+    color: #cccccc;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+}
+
+section.section_marketing .container {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 1100px) {
+    section.section_marketing .container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media (max-width: 544px) {
+    section.section_marketing .container {
+        padding-left: 37px;
+        padding-right: 37px;
+    }
+}
+
+section.section_marketing .container .sectiontext {
+    text-align: center;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    letter-spacing: -0.4px;
+}
+
 
 
 
 .emoji {
     vertical-align: middle;
+}
+
+.emoji.mobile {
+    display: none;
 }
 
 a {
@@ -662,6 +789,75 @@ section.section_welcome .iphone .appicon img {
 
     section.section_welcome .container .magazines .vb img {
         width: 30px;
+    }
+
+    section.section_automate {
+        text-align: left;
+        padding-top: 40px;
+    }
+
+    section.section_automate .container .iphone {
+        height: auto;
+        margin-left: -18px;
+        margin-right: -18px;
+        width: auto;
+        margin-top: 30px;
+    }
+
+    section.section_automate .container .iphone img.phone {
+        display: none;
+    }
+
+    section.section_automate .container .iphone .phoneup {
+        display: none;
+    }
+
+    section.section_automate .container .iphone .shadow {
+        display: none;
+    }
+
+    section.section_automate .container .iphone .notifications {
+        position: relative;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        padding-bottom: 4px;
+    }
+
+    section.section_automate .container .iphone .notifications .item {
+        margin-bottom: 4px;
+        border-radius: 10px;
+        padding: 8px;
+    }
+
+    section.section_automate .container .iphone .notifications .item .caption {
+        font-size: 11px;
+        margin-bottom: 4px;
+    }
+
+    section.section_automate .container .iphone .notifications .item .caption img {
+        width: 15px;
+        height: 15px;
+        margin-top: -3px;
+    }
+
+    section.section_automate .container .iphone .notifications .item .caption .now {
+        font-size: 12px;
+        margin-right: 1px;
+    }
+
+    section.section_automate .container .iphone .notifications .item .name {
+        margin-bottom: 0px;
+        font-size: 13px;
+    }
+
+    section.section_automate .container .iphone .notifications .item:last-child {
+        margin-bottom: -22px;
+    }
+
+    section.section_automate .flag {
+        display: none;
     }
 
 
