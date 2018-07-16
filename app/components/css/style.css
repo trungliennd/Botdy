@@ -89,6 +89,47 @@ body {
     overflow: hidden;
 }
 
+.btn-button.message {
+    padding-left: 50px;
+    padding-right: 27px;
+}
+
+.btn-button.message img{
+    width: 16px;
+    position: absolute;
+    top: 17px;
+    left: 16px;
+}
+
+.btn-button.message {
+    text-decoration: none;
+}
+
+.name {
+    text-decoration: none;
+}
+
+.btn-button:hover {
+    background-color: rgb(23, 38, 245);
+}
+
+@media (max-width: 544px) {
+    .btn-button.message {
+        height: 37px;
+        font-size: 16px;
+        background-position: 11px 9px;
+        padding-left: 39px;
+    }
+
+    .btn-button.message img {
+        width: 18px;
+        position: absolute;
+        top: 9px;
+        left: 11px;
+    }
+}
+
+
 @media (min-width: 1025px) {
     .scale {
         margin-left: auto;
@@ -262,6 +303,253 @@ section.section_automate .container {
     margin-right: auto;
 }
 
+section.section_templates {
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 50px;
+    background-color: #f9f8f8;
+    position: relative;
+}
+
+section.section_templates .container .sectioncaption {
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: -4px;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+section.section_templates .container {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section.section_templates .container .sectiontext {
+    text-align: center;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+section.section_templates .overflow {
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+section.section_templates .mobilelogos {
+    display: none;
+    width: 2073px;
+    height: 321px;
+    margin-left: 35px;
+    position: relative;
+    transition: transform 40s linear;
+    transform: translateY(0px);
+}
+
+section.section_templates .mobilelogos img {
+    width: 100%;
+    height: 321px;
+}
+
+section.section_templates .sites {
+    transition: transform 80s linear;
+    transform: translateY(0px);
+    display: flex;
+    justify-content: space-between;
+    width: 1583px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -790px;
+}
+
+section.section_templates .sites .site {
+    width: 240px;
+    height: 320px;
+    position: relative;
+}
+
+section.section_templates .sites .site img {
+    position: absolute;
+    z-index: 2;
+}
+
+section.section_templates .sites .site .caption, section.section_templates .sites .site .text {
+    position: absolute;
+    text-align: left;
+    left: 25px;
+    right: 25px;
+    z-index: 2;
+}
+
+section.section_templates .sites .site .caption {
+    bottom: 105px;
+    color: white;
+    line-height: 95%;
+}
+
+section.section_templates .sites .site .text {
+    bottom: 65px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+section.section_templates .sites .site .previewbutton {
+    position: absolute;
+    z-index: 2;
+    bottom: 22px;
+    left: 50%;
+    margin-left: -50px;
+    font-size: 16px;
+    width: 100px;
+    color: white;
+    padding: 1px 10px 3px 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    line-height: 150%;
+}
+
+section.section_templates .sites .site .bg {
+    background-color: pink;
+    position: absolute;
+    border-radius: 12px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    pointer-events: none;
+    transition: all 0.5s;
+}
+
+section.section_templates .sites .site:hover .bg {
+    transform: scale(1.02);
+}
+
+section.section_templates .sites .site.quiz .bg {
+    background-color: #053748;
+}
+
+section.section_templates .sites .site.quiz img {
+    top: 50px;
+    margin-left: -50px;
+    left: 50%;
+}
+
+section.section_templates .sites .site.influencer .bg {
+    background-color: #c30001;
+}
+
+section.section_templates .sites .site.influencer img {
+    top: 50px;
+    margin-left: -50px;
+    left: 50%;
+}
+
+section.section_templates .sites .site.shopify .bg {
+    background-color: #fff;
+}
+
+section.section_templates .sites .site.shopify img {
+    top: 50px;
+    margin-left: -50px;
+    left: 50%;
+}
+
+section.section_templates .sites .site.shopify .caption {
+    color: black;
+}
+
+section.section_templates .sites .site.shopify .text {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+section.section_templates .sites .site.shopify .previewbutton {
+    color: black;
+}
+
+section.section_templates .sites .site.realestateagent .bg {
+    background-color: #053748;
+}
+
+section.section_templates .sites .site.realestateagent img {
+    top: 50px;
+    margin-left: -50px;
+    left: 50%;
+}
+
+section.section_templates .sites .site.publisher .bg {
+    background-color: #089e00;
+}
+
+section.section_templates .sites .site.publisher img {
+    top: 50px;
+    margin-left: -66px;
+    left: 50%;
+}
+
+section.section_templates .sites .site.giphy .bg {
+    background-color: black;
+}
+
+section.section_templates .sites .site.giphy img {
+    top: 30px;
+    margin-left: -70px;
+    left: 50%;
+}
+
+section.section_templates .sites .site.appointmentbooking .bg {
+    background-color: #f06040;
+}
+
+section.section_templates .sites .site.appointmentbooking img {
+    top: 30px;
+    margin-left: -50px;
+    left: 50%;
+}
+
+section.section_templates .sites .site.dialogflow .bg {
+    background-color: #8fe8ff;
+}
+
+section.section_templates .sites .site.dialogflow img {
+    top: 25px;
+    margin-left: -50px;
+    left: 50%;
+}
+
+section.section_templates .sites .site.dialogflow .caption {
+    color: black;
+}
+
+section.section_templates .sites .site.dialogflow .text {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+section.section_templates .sites .site.dialogflow .previewbutton {
+    color: black;
+}
+
+section.section_contact {
+    padding-top: 110px;
+    padding-bottom: 170px;
+    background-color: #f9f8f8;
+    position: relative;
+}
+
+section.section_contact .container {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 850px;
+}
+
+
 @media (max-width: 1100px) {
     section.section_automate .container {
         padding-left: 5%;
@@ -271,6 +559,18 @@ section.section_automate .container {
         padding-left: 5%;
         padding-right: 5%;
     }
+
+    section.section_templates .container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    section.section_contact .container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
 }
 
 @media (max-width: 544px) {
@@ -289,6 +589,18 @@ section.section_automate .container {
         letter-spacing: -1.6px;
         margin-left: -1px;
         margin-bottom: 15px;
+    }
+
+    section.section_templates .container .sectioncaption {
+        font-size: 32px;
+        letter-spacing: -1.6px;
+        margin-bottom: 15px;
+        margin-left: -1px;
+    }
+
+    section.section_contact .container {
+        padding-left: 37px;
+        padding-right: 37px;
     }
 }
 
@@ -498,8 +810,130 @@ section.section_marketing .container .sectiontext {
     letter-spacing: -0.4px;
 }
 
+section.section_marketing .container .diagrams {
+    font-size: 18px;
+    text-align: left;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 55px;
+}
+
+section.section_marketing .container .diagrams .diagram {
+    line-height: 15px;
+    margin-bottom: 30px;
+}
+
+section.section_marketing .container .diagrams .diagram > .caption {
+    margin-left: 20%;
+    padding-bottom: 15px;
+}
+
+section.section_marketing .container .diagrams .diagram .messenger {
+    display: flex;
+    margin-bottom: 4px;
+    color: #ccc;
+}
+
+section.section_marketing .container .diagrams .diagram .mail {
+    display: flex;
+    margin-bottom: 4px;
+    color: #ccc;
+}
+
+section.section_marketing .container .diagrams .diagram .messenger .left, section.section_marketing .container .diagrams .diagram .mail .left {
+    flex-basis: 20%;
+    padding-right: 4%;
+    text-align: right;
+    letter-spacing: -0.4px;
+}
+
+section.section_marketing .container .diagrams .diagram .messenger .left .caption, section.section_marketing .container .diagrams .diagram .mail .left .caption {
+    padding-bottom: 15px;
+}
+
+section.section_marketing .container .diagrams .diagram .messenger .right, section.section_marketing .container .diagrams .diagram .mail .right {
+    flex-basis: 80%;
+    display: flex;
+}
+
+section.section_marketing .container .diagrams .diagram .messenger .right .row-1, section.section_marketing .container .diagrams .diagram .mail .right .row-1 {
+    height: 15px;
+}
+
+section.section_marketing .container .diagrams .diagram .messenger .right .percent, section.section_marketing .container .diagrams .diagram .mail .right .percent {
+    padding-left: 2%;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+section.section_marketing .container .diagrams .diagram .row-1 .fill {
+    width: 0%;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+section.section_marketing .container .diagrams .diagram .messenger .right .row-1 .fill {
+    background-color: #208ef0;
+}
+
+section.section_marketing .container .diagrams .diagram .mail .right .row-1 .fill {
+    background-color: rgba(204, 204, 204, 0.64);
+}
+
+section.section_marketing .container .diagrams .diagram.openrates .messenger .right .row-1 {
+    width: 80%;
+}
+
+section.section_marketing .container .diagrams .diagram.openrates .mail .right .row-1 {
+    width: 25%;
+}
+
+section.section_marketing .container .diagrams .diagram.click .messenger .right .row-1 {
+    width: 30%;
+}
+
+section.section_marketing .container .diagrams .diagram.click .mail .right .row-1 {
+    width: 3%;
+}
 
 
+section.section_marketing .container .facts {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    max-width: 815px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section.section_marketing .container .facts .item {
+    transition: all 0.5s;
+    transform: scale(0);
+}
+
+section.section_marketing .container .facts .item .caption {
+    font-size: 136px;
+    line-height: 100%;
+    letter-spacing: -8px;
+}
+
+section.section_marketing .container .facts .item .text {
+    font-size: 18px;
+    color: #cccccc;
+}
+
+section.section_marketing .container .facts .users .caption {
+    color: rgba(32, 142, 240, 0.64);
+}
+
+section.section_marketing .container .facts .average .caption {
+    color: rgba(32, 142, 240, 0.8);
+}
+
+section.section_marketing .container .facts .ctr .caption {
+    color: #208ef0;
+}
 
 .emoji {
     vertical-align: middle;
@@ -609,6 +1043,83 @@ section.section_welcome .iphone .appicon {
 section.section_welcome .iphone .appicon img {
     max-width: 100%;
     height: auto;
+}
+
+section.section_contact {
+    padding-top: 110px;
+    padding-bottom: 170px;
+    background-color: #f9f8f8;
+    position: relative;
+}
+
+section.section_contact .container {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 850px;
+}
+
+@media (max-width: 1100px) {
+    section.section_contact .container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media (max-width: 544px) {
+    section.section_contact .container {
+        padding-left: 37px;
+        padding-right: 37px;
+    }
+}
+
+section.section_contact .container .agencytext {
+    margin-bottom: 40px;
+}
+
+section.section_contact .container .sectioncaption {
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: -4px;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    margin-bottom: 34px;
+    max-width: none;
+}
+
+@media (max-width: 544px) {
+    section.section_contact .container .sectioncaption {
+        font-size: 32px;
+        letter-spacing: -1.6px;
+        margin-bottom: 15px;
+        margin-left: -1px;
+    }
+}
+
+section.section_contact .container .contactustext {
+    margin-bottom: 40px;
+}
+
+section.section_contact .container .btn-button {
+    margin-bottom: 40px;
+}
+
+section.section_contact .container .talkous {
+    color: #ccc;
+    max-width: 400px;
+    font-size: 18px;
+    line-height: 130%;
+}
+
+section.section_contact .container .talkous a {
+    color: #9e9e9e;
+}
+
+section.section_contact .container .talkous a:hover {
+    color: #208ef0;
 }
 
 @media (max-width: 1100px) {
@@ -860,7 +1371,122 @@ section.section_welcome .iphone .appicon img {
         display: none;
     }
 
+    section.section_marketing .container .diagrams {
+        font-size: 16px;
+        margin-top: 35px;
+        margin-right: -35px;
+    }
 
+    section.section_marketing .container .diagrams .diagram {
+        margin-bottom: 25px;
+    }
+
+    section.section_marketing .container .diagrams .diagram > .caption {
+            margin-left: 0%;
+    }
+
+    section.section_marketing .container .diagrams .diagram .messenger, section.section_marketing .container .diagrams .diagram .mail {
+        flex-wrap: wrap;
+    }
+
+    section.section_marketing .container .diagrams .diagram .messenger .left, section.section_marketing .container .diagrams .diagram .mail .left {
+        flex-basis: 100%;
+        order: 2;
+    }
+
+    section.section_marketing .container .diagrams .diagram .messenger .left .caption, section.section_marketing .container .diagrams .diagram .mail .left .caption {
+        text-align: left;
+        padding-top: 7px;
+    }
+
+    section.section_marketing .container .diagrams .diagram .messenger .right, section.section_marketing .container .diagrams .diagram .mail .right {
+        flex-basis: 100%;
+    }
+
+    section.section_marketing .container .facts {
+        flex-wrap: wrap;
+        margin-top: 30px;
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+
+    section.section_marketing .container .facts .item {
+        margin-bottom: 15px;
+        width: 50%;
+    }
+
+    section.section_marketing .container .facts .item .caption {
+        font-size: 67px;
+        letter-spacing: -2px;
+    }
+
+    section.section_marketing .container .facts .item .text {
+        font-size: 16px;
+        padding-left: 8px;
+    }
+
+    section.section_templates .container {
+        padding-left: 37px;
+        padding-right: 37px;
+    }
+
+    section.section_templates {
+        text-align: left;
+        padding-top: 0px;
+        padding-bottom: 60px;
+    }
+
+    section.section_templates .container .sectiontext {
+        text-align: left;
+    }
+
+    section.section_templates .overflow {
+        height: 321px;
+        margin-top: 45px;
+    }
+
+    section.section_templates .overflow .mobilelogos {
+        display: block;
+    }
+
+    section.section_templates .sites {
+        display: none;
+        left: 5%;
+        margin-left: 0px;
+    }
+
+    section.section_contact {
+        padding-top: 10px;
+        padding-bottom: 60px;
+    }
+
+    section.section_contact .container .contactustext {
+        margin-bottom: 20px;
+    }
+
+    section.section_contact .container .btn-button {
+        margin-bottom: 40px;
+    }
+
+    section.section_contact .container .talktous {
+        font-size: 16px;
+    }
+}
+
+body section.section_marketing .container .diagrams .diagram .animate .row-1 .fill {
+    width: 100%;
+}
+
+body section.section_marketing .container .diagrams .diagram .animate .right .percent {
+    opacity: 1;
+}
+
+body section.section_marketing .container .facts .item.animate {
+    transform: scale(1);
+}
+
+body section.section_templates .overflow.animate .mobilelogos {
+    transform: translateX(-1830px);
 }
 
 

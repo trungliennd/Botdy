@@ -82,6 +82,23 @@ scotchApp.run(['$rootScope', function ($rootScope) {
                 }
                 $rootScope.$on('$viewContentLoaded', function () {
                     animate($('.section_automate .flag')[0], 500);
+                    animate($('.diagram.openrates .messenger')[0], 500);
+                    animate($('.diagram.openrates .mail')[0], 1000);
+                    animate($('.diagram.click .messenger')[0], 1500);
+                    animate($('.diagram.click .mail')[0], 2000);
+                    if ($('html').width() < 544) {
+                        animate($('.facts .item.users')[0], 800);
+                        animate($('.facts .item.average')[0], 800);
+                        animate($('.facts .item.ctr')[0], 1200);
+                    } else {
+                        animate($('.facts .item.users')[0], 2500);
+                        animate($('.facts .item.average')[0], 3000);
+                        animate($('.facts .item.ctr')[0], 3500);
+                    }
+                    if ($('html').width() < 544) {
+                        animate($('.section_templates>.overflow')[0], 0);
+                        return animate($('.section_clients>.overflow')[0], 0);
+                    }
                 });
             };
         })(this));
@@ -155,9 +172,5 @@ scotchApp.run(['$rootScope', function ($rootScope) {
                 });
             }
         })(this));
-
-
-        ;
-        return this
-    }).call(App || {});
+        ;return this}).call(App || {});
 }]);
