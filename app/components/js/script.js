@@ -63,6 +63,7 @@ scotchApp.run(['$rootScope', function ($rootScope) {
         var animate, scale;
         $((function (_this) {
             return function () {
+
                 if ($('html').width() >= 544) {
                     $(window).load(function () {
                         return window.requestAnimationFrame(function () {
@@ -78,6 +79,7 @@ scotchApp.run(['$rootScope', function ($rootScope) {
                             'opacity': 1,
                             'transform': 'translateY(0) translateZ(1px)'
                         });
+                        $('.navbar.navbar-light.navbar-expand-lg').removeClass('fixed-top');
                     });
                 }
                 $rootScope.$on('$viewContentLoaded', function () {
@@ -110,11 +112,44 @@ scotchApp.run(['$rootScope', function ($rootScope) {
                   scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
                   dy = -128 * scrollTop / screen.availHeight;
                   $('.iphone .appicon').css('transform', 'translateY(' + dy + 'px)');
-                 /* console.log("dy is: " + dy);
-                  console.log("pageYOffst is: " + window.pageYOffset);
-                  console.log("scroll element is: " + document.documentElement.scrollTop);
-                  console.log("scroll body is: " + document.body.scrollTop);
-                  console.log("screen is: " + screen.availHeight);*/
+                  if(location.pathname === '/' || location.pathname.indexOf('index.html') !== -1) {
+                      st = scrollTop;
+                      all = $('html')[0].scrollHeight;
+                      avail = screen.availHeight;
+                      result = 1;
+                      if(st < 400) {
+                          result = 0;
+                      }
+                      if(st >= 400 && st < 600) {
+                          result = (st - 400) / 200;
+                      }
+                      if((all - st -avail) > 400 && (all - st - avail) < 600) {
+                          result = (all - stt - avail - 400) / 200;
+                      }
+                      if((all - st - avail) < 400) {
+                          result = 0;
+                      }
+                      $('.btn-button.mobilefacebook').css('opacity', result);
+                  } else {
+                      st = scrollTop;
+                      all = $('html')[0].scrollHeight;
+                      avail = screen.availHeight;
+                      result = 1;
+                      if(st < 400) {
+                          result = 0;
+                      }
+                      if(st >= 400 && st < 600) {
+                          result = (st - 400) / 200;
+                      }
+                      if ((all - st - avail) > 400 && (all - st - avail) < 600) {
+                          result = 1;
+                      }
+                      if ((all - st - avail) < 400) {
+                          result = 1;
+                      }
+                      $('.btn-button.mobilefacebook').css('opacity', result);
+                  }
+                  return true;
                });
             };
         })(this));
@@ -161,6 +196,13 @@ scotchApp.run(['$rootScope', function ($rootScope) {
 
         $(window).resize((function (_this) {
             return function () {
+                var w = $('html').width();
+                if(w < 996) {
+                    $('.navbar.navbar-light.navbar-expand-lg').removeClass('fixed-top');
+                }else {
+                    var check = $('.navbar.navbar-light.navbar-expand-lg').hasClass('fixed-top');
+                    if(!check) $('.navbar.navbar-light.navbar-expand-lg').addClass('fixed-top');
+                }
                 return scale();
             };
         })(this));
@@ -181,6 +223,46 @@ scotchApp.run(['$rootScope', function ($rootScope) {
             var register = $('#register');
             var formSignIn = $('form.sign-in');
             var formRegister = $('form.register');
+
+
+            $('.btn-sign').on('click', function () {
+               overlay.addClass('visible');
+               mainPopUp.addClass('visible');
+               signIn.addClass('active');
+               register.removeClass('active');
+               formRegister.removeClass('move-left');
+               formSignIn.removeClass('move-left');
+            });
+
+            overlay.on('click', function () {
+               $(this).removeClass('visible');
+               mainPopUp.removeClass('visible');
+            });
+
+            $('#popup-close-button a').on('click', function (e) {
+                e.preventDefault();
+                overlay.removeClass('visible');
+                mainPopUp.removeClass('visible');
+            });
+
+            signIn.on('click', function () {
+                console.log('message');
+                signIn.addClass('active');
+                register.removeClass('active');
+                formSignIn.removeClass('move-left');
+                formRegister.removeClass('move-left');
+            });
+
+            register.on('click', function(){
+                signIn.removeClass('active');
+                register.addClass('active');
+                formSignIn.addClass('move-left');
+                formRegister.addClass('move-left');
+            });
+
+            $('input').on('submit', function(e){
+                e.preventDefault(); //used to prevent submission of form...remove for real use
+            });
 
         })(this));
 

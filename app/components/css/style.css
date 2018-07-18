@@ -89,6 +89,58 @@ body {
     overflow: hidden;
 }
 
+@media (max-width: 544px) {
+    .btn-button.mobilefacebook {
+        display: none;
+        position: fixed;
+        z-index: 5;
+        left: 50%;
+        width: 244px;
+        height: 47px;
+        bottom: 8vw;
+        margin-left: -122px;
+        border-radius: 8px;
+        font-size: 16px;
+        letter-spacing: 0px;
+        padding-left: 40px;
+        padding-right: 0px;
+        pointer-events: all;
+        transform-origin: 50%;
+        opacity: 1 !important;
+    }
+    .button.mobilefacebook img {
+        width: 16px;
+        top: 10px;
+        left: 13px;
+    }
+
+    .button.mobilefacebook {
+        display: block;
+    }
+}
+
+@media (min-width: 545px) {
+    .btn-button.mobilefacebook {
+        background-color: #208ef0;
+        border-radius: 8px;
+        color: white;
+        font-size: 20px;
+        height: 48px;
+        display: inline-block;
+        padding: 9px 25px 0px 19px;
+        transition: all linear 0.3s;
+        opacity: 0;
+        position: fixed;
+        right: 32px;
+        bottom: 32px;
+        z-index: 10;
+        width: 280px;
+        padding-left: 49px;
+        transform-origin: 100%;
+    }
+}
+
+
 .btn-button.message {
     padding-left: 50px;
     padding-right: 27px;
@@ -110,7 +162,7 @@ body {
 }
 
 .btn-button:hover {
-    background-color: rgb(23, 38, 245);
+    background-color: #29487d;
 }
 
 @media (max-width: 544px) {
@@ -1755,12 +1807,12 @@ body section.section_templates .overflow.animate .mobilelogos {
 .main-popup {
     position: fixed;
     left: 0;
-    top: 30px;
+    top: 20%;
     margin: 0;
     width: 100%;
     height: 450px;
-    background-color: #e7e7f6;
-    border-radius: 5px;
+    background-color: white;
+    border-radius: 10px;
     z-index: 15;
     opacity: 0;
     visibility: hidden;
@@ -1773,6 +1825,7 @@ body section.section_templates .overflow.animate .mobilelogos {
     visibility: visible;
     transform: translateY(10px);
     transition: all .5s ease;
+    z-index: 15px;
 }
 
 @media (min-width: 544px) {
@@ -1846,34 +1899,35 @@ body section.section_templates .overflow.animate .mobilelogos {
     padding: 20px 0;
     margin: 0;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 0.8em;
 }
 
 #sign-in {
-    background-color: #ceaee8;
+    background-color: #007bff;
     color: #fff;
-    border-radius: 5px 0 0 0;
+    border-radius: 8px 0 0 0;
 }
 
 #sign-in.active {
-    color: #ceaee8;
+    color: #007bff;
     background-color: transparent;
 }
 
 #register {
-    background-color: #ceaee8;
+    background-color: #007bff;
     color: #fff;
-    border-radius: 0 5px 0 0;
+    border-radius: 0 8px 0 0;
 }
 
 #register.active {
-    color: #ceaee8;
+    color: #007bff;
     background-color: transparent;
 }
 
 .popup-content {
     height: 400px;
     overflow: hidden;
+    position: absolute;
 }
 
 form.sign-in {
@@ -1894,8 +1948,8 @@ form.sign-in.move-left {
 }
 
 form label {
-    font-size: 1.1em;
-    color: #ceaee8;
+    font-size: 0.8em;
+    /*color: #ceaee8;*/
     margin-left: 23px;
 }
 
@@ -1906,13 +1960,27 @@ form.sign-in input {
     margin: 5px 5% 30px 5%;
     padding: 10px;
     font-size: 1em;
-    color: #ceaee8;
+ /*   color: #ceaee8;*/
     outline: none;
     border: none;
 }
 
-input#submit {
-    background-color: #ceaee8;
+form.sign-in input[type=text] {
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form.sign-in input[type=password] {
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input#submit1 {
+    background-color: #4CAF50;
     color: #fff;
     height: 50px;
     width: 90%;
@@ -1927,9 +1995,33 @@ input#submit {
     border: none;
 }
 
+input#submit1:hover {
+    background-color: #45a049;
+}
+
+input#submit2 {
+    background-color: #4CAF50;
+    color: #fff;
+    height: 50px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 25px;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1em;
+    border: none;
+}
+
+input#submit2:hover {
+    background-color: #45a049;
+}
+
 form.register {
     position: relative;
-    top: -280px;
+    top: -330px;
     left: 0;
     font-size: 1em;
     opacity: 0;
@@ -1940,6 +2032,30 @@ form.register {
     transition: all .35s;
 }
 
+
+form.register input[type=text] {
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+form.register input[type=password]#password-register {
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form.register input[type=password]#password-confirmation {
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
 form.register.move-left {
     opacity: 1;
     transform: translateX(0);
@@ -1949,10 +2065,10 @@ form.register input {
     border-radius: 5px;
     width: 90%;
     height: 40px;
-    margin: 5px 5% 15px 5%;
+    margin: 0px 5% 5px 5%;
     padding: 10px;
     font-size: 1em;
-    color: #ceaee8;
+   /* color: #ceaee8;*/
     outline: none;
     border: none;
 }
@@ -1970,12 +2086,12 @@ p.check-mark {
     margin: 0 0 0 -100px;
     padding: 0;
     text-align: center;
-    color: #ceaee8;
+   /* color: #007bff;*/
     font-size: .8em;
 }
 
 p.check-mark a {
-    color: #a48bb9;
+    color: #007bff;
 }
 
 p.check-mark input {
@@ -1985,7 +2101,7 @@ p.check-mark input {
     margin: 0;
     padding: 0;
     font-size: 2em;
-    color: #ceaee8;
+    /*color: #007bff;*/
     outline: none;
     border: none;
 }
@@ -1993,6 +2109,7 @@ p.check-mark input {
 p.check-mark label {
     margin-left: 5px;
 }
+
 
 
 .footer {
